@@ -1,1 +1,0 @@
-# Jean Carlo Garibay Gonzalez
