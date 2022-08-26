@@ -1,10 +1,15 @@
 # Presentacion
 
-## Historial académico 
-**Primaria**
+## :tent:Historial académico 
 
-*Secundaria* 
+| Nivel academico   | Nombre de la institucion              |
+| :---              |    :----:                             |
+| Primaria          | Rebeca Gomez de la Cruz               |
+| Secundaria        | Sec.10 Antonio Angel Carmona Anzaldua | 
+| Preparatoria      |     CBTis 137                         |
+
 ## Su experiencia laboral
+Actualmente me encuentro trabajando en **McDonals** pero antes trabaja ayudandole a un programador independiente en una sucursal de donde vendian boletos de eventos(centro cultural, polyforum, etc) , tambien tenia una pagina web y manejabamos una base de datos. 
 
 ## Lenguajes de programación que dominanos
 C#
@@ -16,11 +21,12 @@ C#
 4. JavaScript
 5. C++
 
-## En que piensa especializarse en un futuro (BD, Móviles, redes etc)
+## :hourglass:En que piensa especializarse en un futuro (BD, Móviles, redes etc)
 Tengo pensado de momento especializarme en ***Redes***
 
-## Hobbies
+## :trollface:Hobbies
 - Videojuegos
 - Parques
+- Dibujar
 
 ![Tux, the Linux mascot](/images/html.jpg)
