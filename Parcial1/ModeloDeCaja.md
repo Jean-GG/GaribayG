@@ -1,10 +1,10 @@
-#Modelo de Caja
+# Modelo de Caja
 
-##Concepto
+## Concepto
 
 El modelo de cajas completo se aplica a cajas que presentan comportamiento en bloque; las cajas con comportamiento en línea solo usan una parte del comportamiento definido en el modelo de cajas. El modelo define cómo funcionan juntas las diferentes partes de una caja (margen, borde, relleno y contenido) para crear una caja que puedas ver en tu página. Para complicarlo un poco más, hay un modelo de cajas estándar y un modelo de cajas alternativo
 
-##Partes de las cajas
+## Partes de las cajas
 
 **Contenido de la caja** (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
 
