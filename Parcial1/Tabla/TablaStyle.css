@@ -1,0 +1,10 @@
+table{
+    border: solid 2px  black;
+}
+tbody > tr:hover{
+    background-color: blueviolet    ;
+}
+
+td{
+    border: solid 2px black;
+}
