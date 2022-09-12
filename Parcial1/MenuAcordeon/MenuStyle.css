@@ -1,0 +1,13 @@
+ul{
+    list-style: none;
+}
+ul > li > ul{
+display: none;    
+}
+ul > li> ul:target{
+    display: block;
+}
+
+.body{
+    color: black;
+}
