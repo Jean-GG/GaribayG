@@ -1,0 +1,10 @@
+*{
+    }
+}
+div.content{
+    float: left;
+    width: calc(100% - 200px);
+    background-color: aqua;
+    padding: 1px 16px;
+    height: 100%;
+}
