@@ -32,11 +32,14 @@ Para obtener más control sobre los ítems flex podemos apuntarlos directamente.
 - flex-shrink
 - flex-basis
 
-|Propiedades              |                                                                                                       |
+Propiedades de hijos
+|Propiedades              |      Concepto                                                                                         |
 | :---                    |    :----:                                                                                             |
 |flex-basis               |   Con flex-basis se define el tamaño de un ítem en términos del espacio que deja como espacio disponible. El valor inicial de esta propiedad es auto — en este caso el navegador revisa si los ítems definen un tamaño. En el ejemplo de arriba, todos los ítems tienen un ancho de 100 pixeles así que este es usado como flex-basis.                                                                                                    |
 |flex-grow                | Con la propiedad flex-grow definida como un entero positivo, los ítems flex pueden crecer en el eje principal a partir de flex-basis. Esto hará que el ítem se ajuste y tome todo el espacio disponible del eje, o una proporción del espacio disponible si otro ítem también puede crecer.|
 |flex-shrink              | Así como la propiedad flex-grow se encarga de añadir espacio sobre el eje principal, la propiedad flex-shrink controla como se contrae. Si no contamos con suficiente espacio en el contenedor para colocar los ítems y flex-shrink posee un valor entero positivo, el ítem puede contraerse a partir de flex-basis. Así como podemos asignar diferentes valores de flex-grow con el fin que un ítem se expanda más rápido que otros — un ítem con un valor más alto de flex-shrink se contraerá más rápido que sus hermanos que poseen valores menores.|
+| Order                    | Numero(peso) que indica el orden de aparición de los ítems.                                          |
+
 
 ## Alineación, justificación y distribución del espacio libre entre ítems
 Una característica clave de flexbox es la capacidad de alinear y justificar ítems sobre los ejes principal y cruzado, y distribuir el espacio entre los ítems flex.
@@ -54,3 +57,4 @@ Tipos de align.items
 - center
 - space-around
 - space-between
+
