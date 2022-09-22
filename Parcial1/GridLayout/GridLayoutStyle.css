@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.contenedor {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25%  50% 25%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas:'menulat encabezado encabezado' 'menulat columna1 columna2' 'menulat piepagina piepagina';
+    justify-content: center;
+    align-items: center;
+    justify-items: stretch;
+    align-items: stretch;
+}
+.caja{
+    border: 1px solid white;
+    background-color: gold;
+    text-align: center;
+}
+#caja1{grid-area:menulat;}
+#caja2{grid-area:encabezado ;}
+#caja3{grid-area:columna1;}
+#caja4{grid-area:columna2;}
+#caja5{grid-area:piepagina;}
