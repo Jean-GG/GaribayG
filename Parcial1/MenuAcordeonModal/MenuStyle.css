@@ -1,0 +1,64 @@
+/* Menu acordeon Click*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    width: 200px;
+    height: 500px;
+}
+
+ul > li > ul {
+    display: none;
+}
+
+ul > li:target > ul {
+    display: block;
+    height: 100%;
+}
+
+.opcion{
+    background: blue;
+    color: white;
+}
+
+a { color: black;
+    text-decoration: none;
+}
+
+.subOpcion{
+    padding-left: 20px;
+    background: gray;
+    color: white;
+}
+
+/* Ventana Modal */
+.ventanaModal{
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: silver;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+}
+.ventanaModal:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+.ventanaModal > div{
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px;
+    border-radius: 10px;
+    background: white;
+}
+.botonAbrir:hover {background: blue; color: white;}
+.botonCerrar:hover {background: blue; color: white; }
