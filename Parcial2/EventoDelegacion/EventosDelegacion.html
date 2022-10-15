@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="idcontene" class="contenedor">
+    <div id="idcont" class="contenedor">
         <div id="caja1" class="caja">Caja 1</div>
         <div id="caja2" class="caja">Caja 2</div>
         <div id="caja3" class="caja">Caja 3</div>
@@ -20,17 +20,18 @@
         <div id="caja9" class="caja">Caja 9</div>
     </div>
     <script>
-        var elem = document.getElementById("idcontene");
-        elem.addEventListener("click",cambiarCaja);
-        function cambiarCaja(evento){
+        var elem = document.getElementById("idcont")
+
+        elem.addEventListener('click', cambioCaja)
+
+        function cambioCaja(evento){
             console.log(evento);
-            if(document.getElementById(evento.tarjet.id).classList.contains("caja")){
-                document.getElementById(evento.tarjet.id).classList.toggle("cajaAmarilla");
-            }
-            if (evento.tarjet.id == "caja5"){
-                elem.removeEventListener("click",cambiarCaja);
+            if(document.getElementById(evento.target.id).classList.contains("caja")){
+                console.log("click en caja")
+                document.getElementById(evento.target.id).classList.toggle("cajaEvento")
             }
         }
-    </script>
+</script>
+    
 </body>
 </html>

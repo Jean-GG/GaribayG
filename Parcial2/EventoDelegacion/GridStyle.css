@@ -24,6 +24,15 @@
     margin: 2px;
     text-align: center;
 }
+.cajaEvento {
+    border: 1px black solid;
+    text-align: center;
+    background-color: palevioletred;
+}
+
+.cajaEvento:hover{
+    transform: scale(1.1);
+}
 /*#caja1 {
     grid-column-start: 1;
     grid-row-end: 1;
