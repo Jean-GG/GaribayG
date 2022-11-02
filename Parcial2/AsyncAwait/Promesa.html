@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch</title>
 </head>
+<style>
+    *{
+        background-color: aqua;
+    }
+</style>
 <body>
     <button id="btnPeticion">Peticion</button>
+    <button id="btnPeticionAsyncAwake">Peticion AsyncAwake</button>
     <div id="pokemon">
         Nombre
     </div>
@@ -20,6 +26,12 @@
             console.log(datosJson.name)
             document.getElementById("pokemon").innerText = datosJson.name;
         })
+    });
+
+    document.getElementById("btnPeticionAsyncAwake").addEventListener("click", async function(){
+        let respuesta = await fetch("https://pokeapi.co/api/v2/pokemon/kyurem")
+        let datosJson = await respuesta.json();
+        document.getElementById("pokemon").innerText = datosJson.name;
     });
 </script>
 </html>
