@@ -60,6 +60,7 @@
     <button type="submit" class="btn btn-primary">Enviar</button>
     <button type="button" class="btn btn-primary" id="liveToastBtn">Tostada</button>
     <button type="button" class="btn btn-primary" id="disparaModal">Disparar modal</button>
+    <button type="button" class="btn btn-primary" id="btnGet">Registro</button>
   </form>
 
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -111,6 +112,31 @@
       const myModal = new bootstrap.Modal(document.getElementById('miModal'), "focus");
       myModal.show()
     });
+
+    document.getElementById("btnGet").addEventListener("click", () =>{
+      fetch('GetRegistro.php')
+      .then(respuesta=>respuesta.json())
+      .then(dato=>refrescar(dato));
+      
+      function refrescar(reg){
+        document.getElementById("idRfc").value=reg.id;
+        document.getElementById("idNombre").value=reg.nombre;
+        document.getElementById("idTelefono").value=reg.telefono;
+        document.getElementById("idCurp").value=reg.curp;
+        document.getElementById("idDomicilio").value=reg.domicilio;
+        document.getElementById("idCP").value=reg.cp;
+        document.getElementById("idPuesto").value=reg.puesto;
+        document.getElementById("idEstadoCiv").value=reg.estadoCiv;
+      }
+
+      //document.getElementById("btnGet").addEventListener("click", async () => {
+        //let respuesta = await fetch('GetRegistro.php');
+        //let dato = await respuesta
+      //})
+
+
+    });
+
   </script>
 </body>
 
