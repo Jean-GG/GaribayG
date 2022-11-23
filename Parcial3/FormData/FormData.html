@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+  <form>
+    <div class="row">
+      <div class="form-group col-sm-3 col-md-4 col-lg-4">
+        <label for="idRfc" class="form-label">RFC</label>
+        <input type="text" class="form-control" id="idRfc" aria-describedby="emailHelp">
+      </div>
+
+      <div class="form-group col-sm-5 col-md-4 col-lg-4">
+        <label for="idNombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="idNombre">
+      </div>
+
+      <div class="form-group col-sm-4 col-md-4 col-lg-4">
+        <label for="idTelefono" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="idTelefono">
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-4 col-md-4 col-lg-4">
+          <label for="idCurp" class="form-label">CURP</label>
+          <input type="text" class="form-control" id="idCurp">
+        </div>
+
+        <div class="form-group col-sm-4 col-md-4 col-lg-4">
+          <label for="idDomicilio" class="form-label">Domicilio</label>
+          <input type="text" class="form-control" id="idDomicilio">
+        </div>
+
+        <div class="form-group col-sm-4 col-md-4 col-lg-4">
+          <label for="idCP" class="form-label">Codigo Postal</label>
+          <input type="text" class="form-control" id="idCP">
+        </div>
+        <div class="row">
+          <div class="form-group col-sm-4 col-md-4 col-lg-6">
+            <label for="idPuesto" class="form-label">Puesto</label>
+            <input type="text" class="form-control" id="idPuesto">
+          </div>
+
+          <div class="form-group col-sm-4 col-md-4 col-lg-6">
+            <label for="idEstadoCiv" class="form-label">Estado civil</label>
+            <input type="text" class="form-control" id="idEstadoCiv">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary" id="btnSolicitud">Solicitar datos</button>
+    <button type="button" class="btn btn-primary" id="btnGet">Registro</button>
+  </form>
+  <script>
+
+    document.getElementById("btnGet").addEventListener("click", () =>{
+      fetch('GetRegistro.php')
+      .then(respuesta=>respuesta.json())
+      .then(dato=>refrescar(dato));
+      
+      function refrescar(reg){
+        document.getElementById("idRfc").value=reg.id;
+        document.getElementById("idNombre").value=reg.nombre;
+        document.getElementById("idTelefono").value=reg.telefono;
+        document.getElementById("idCurp").value=reg.curp;
+        document.getElementById("idDomicilio").value=reg.domicilio;
+        document.getElementById("idCP").value=reg.cp;
+        document.getElementById("idPuesto").value=reg.puesto;
+        document.getElementById("idEstadoCiv").value=reg.estadoCiv;
+      }
+    });
+
+  </script>
+</body>
+
+</html>
