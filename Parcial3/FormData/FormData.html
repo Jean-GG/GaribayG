@@ -10,11 +10,11 @@
 </head>
 
 <body>
-  <form>
+  <form id="formulario">
     <div class="row">
       <div class="form-group col-sm-3 col-md-4 col-lg-4">
         <label for="idRfc" class="form-label">RFC</label>
-        <input type="text" class="form-control" id="idRfc" aria-describedby="emailHelp">
+        <input type="text" name="Rfc" class="form-control" id="idRfc" aria-describedby="emailHelp">
       </div>
 
       <div class="form-group col-sm-5 col-md-4 col-lg-4">
@@ -60,21 +60,22 @@
   </form>
   <script>
 
-    document.getElementById("btnGet").addEventListener("click", () =>{
-      fetch('GetRegistro.php')
-      .then(respuesta=>respuesta.json())
-      .then(dato=>refrescar(dato));
-      
-      function refrescar(reg){
-        document.getElementById("idRfc").value=reg.id;
-        document.getElementById("idNombre").value=reg.nombre;
-        document.getElementById("idTelefono").value=reg.telefono;
-        document.getElementById("idCurp").value=reg.curp;
-        document.getElementById("idDomicilio").value=reg.domicilio;
-        document.getElementById("idCP").value=reg.cp;
-        document.getElementById("idPuesto").value=reg.puesto;
-        document.getElementById("idEstadoCiv").value=reg.estadoCiv;
-      }
+    document.getElementById("btnGet").addEventListener("click",async () =>{
+      var datosFormulario = new FormData(document.getElementById('formulario'));
+    let respuesta = await fetch('Consulta.php', {
+        method: 'POST',
+        body: datosFormulario
+    })
+    let dato = await respuesta.json();
+    console.log(dato);
+    document.getElementById('idRfc').value = dato.Rfc;
+    document.getElementById('idNombre').value = dato.Nombre;
+    document.getElementById('idTelefono').value = dato.Telefono;
+    document.getElementById('idCurp').value = dato.Curp;
+    document.getElementById('idDomicilio').value = dato.Domicilio;
+    document.getElementById('idCP').value = dato.CodigoPostal;
+    document.getElementById('idPuesto').value = dato.Puesto;
+    document.getElementById('idEstadoCiv').value = dato.EstadoCivil;
     });
 
   </script>
