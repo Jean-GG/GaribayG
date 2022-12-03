@@ -26,7 +26,7 @@
             let miForm = document.getElementById('miFormulario');
             let bodyContent = new FormData(miForm); 
 
-            let response = await fetch("http://localhost/GaribayG/Parcial3/PDF/CrearPDF.php", {
+            let response = await fetch("http://localhost/GaribayG/PDF/CrearPDF.php", {
                 method: "POST",
                 body: bodyContent
             });
